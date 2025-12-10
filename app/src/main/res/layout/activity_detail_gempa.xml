@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- ====== TOOLBAR ====== -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="@android:color/white"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!-- ====== KONTEN SCROLL ====== -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+
+            <!-- ====== CARDVIEW SHAKEMAP ====== -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- SHIMMER LOADING -->
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:shimmer_auto_start="true"
+                        app:shimmer_duration="1100">
+
+                        <ImageView
+                            android:id="@+id/imgShakemapDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:background="#DDDDDD" />
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <!-- Overlay label ShakeMap -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ShakeMap"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:background="#99000000"
+                        android:padding="6dp"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="bottom|start"
+                        android:textSize="14sp"
+                        android:alpha="0.8"/>
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <!-- ====== DATA GEMPA ====== -->
+            <TextView
+                android:id="@+id/txtTanggalDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal:"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/txtJamDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jam:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtWilayahDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wilayah:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtMagnitudeDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Magnitudo:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtKedalamanDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kedalaman:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtKoordinatDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Koordinat:"
+                android:textSize="16sp" />
+
+
+            <!-- BUTTON -->
+            <Button
+                android:id="@+id/btnLihatPetaDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lihat Lokasi di Maps"
+                android:layout_marginTop="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+
+
